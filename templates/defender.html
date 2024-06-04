@@ -5,9 +5,10 @@
     <title>{{ defender[1] }}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
+<body style="background-image: url('{{ url_for('static', filename='images/R6Background.jpg') }}'); background-size: cover; 
+    background-position: center; height: 100vh;">
     <h1>{{ defender[1] }}</h1>
-    <img src="{{ defender[5] }}" alt="{{ defender[1] }} Image">
+    <img src="{{ defender[5] }}" alt="{{ defender[1] }} Image" style="max-width: 300px;">
     <p>Health: {{ defender[6] }}</p>
     <p>Speed: {{ defender[2] }}</p>
     <p>Difficulty: {{ defender[3] }}</p>
