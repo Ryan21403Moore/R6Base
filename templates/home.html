@@ -1,11 +1,18 @@
-<!-- templates/home.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Defender Operators</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/background.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
 </head>
-<body style="background-image: url('{{ url_for('static', filename='images/R6Background.jpg') }}'); background-size: cover; background-position: center; height: 100vh;">
+<body>
     <h1>Defender Operators</h1>
     <ul class="defender-list">
         {% for defender in defenders %}

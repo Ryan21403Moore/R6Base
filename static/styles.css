@@ -6,10 +6,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("{{ url_for('static', filename='images/R6Background.jpg') }}");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
 
 }
 
@@ -58,4 +54,8 @@ h1 {
 /* Style the color of the defender button letters when about to click onto it */
 .defender-item a:hover {
     color: #2bff00;
+}
+
+.white-text {
+    color: white;
 }
