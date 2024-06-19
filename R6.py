@@ -2,7 +2,7 @@ from flask import Flask, render_template
 import sqlite3
 
 app = Flask(__name__)
-# Path to the SQLite database file
+#  Path to the SQLite database file
 db_path = 'SiegeBase.db'
 
 
@@ -25,8 +25,10 @@ def defender(defender_id):
         cursor = conn.cursor()
         #  Get all of the defenders for the page.
         cursor.execute("SELECT * FROM Defenders WHERE defender_id = ?", (defender_id,))
+        #  Fetch all rows from the gadgets query result
         defender = cursor.fetchone()
         cursor.execute("SELECT Gadgets.name, Gadgets.description FROM Gadgets JOIN WeaponGadget ON Gadgets.gadget_id = WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?", (defender_id,))
+        #  Fetch all rows from the weapons query result
         gadgets = cursor.fetchall()
         cursor.execute("SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget ON Weapons.weapon_id = WeaponGadget.weapon_id WHERE WeaponGadget.defender_id = ?", (defender_id,))
         weapons = cursor.fetchall()
