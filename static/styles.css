@@ -12,7 +12,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100%; /* Ensure the body covers at least 100% of the viewport height */
+    min-height: 100%; /* Ensure the body covers at least 100% of the height */
 }
 
 /* Center the main heading "Defenders" */
@@ -37,6 +37,7 @@ h1 {
     background-color: rgba(39, 69, 167, 0.5); /* Slightly transparent background */
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
+    font-size: 20px;
     margin: 10px;
     padding: 50px;
     text-align: center;
@@ -56,6 +57,7 @@ h1 {
     color: #2bff00;
 }
 
+/* Style the color of the writing once you click onto the defender. */
 .white-text {
     color: white;
 }
