@@ -14,7 +14,7 @@ def home():
         #  Select all of the defender colums from the database.
         cursor.execute("SELECT * FROM Defenders")
         defenders = cursor.fetchall()
-    #  Render the home.html template, allowing the defenders to be displayed onto the homepage.
+    #  Render the home.html template, for the defenders be shown on homepage.
     return render_template('home.html', defenders=defenders)
 
 
@@ -25,10 +25,10 @@ def defender(defender_id):
         cursor = conn.cursor()
         #  Get all of the defenders for the page.
         cursor.execute("SELECT * FROM Defenders WHERE defender_id = ?", (defender_id,))
-        #  Fetch all rows from the gadgets query result
+        #  Fetch all rows and the details from the gadgets query result to then be able to display to the user.
         defender = cursor.fetchone()
         cursor.execute("SELECT Gadgets.name, Gadgets.description FROM Gadgets JOIN WeaponGadget ON Gadgets.gadget_id = WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?", (defender_id,))
-        #  Fetch all rows from the weapons query result
+        #  Fetch all rows and details from the weapons query result to then be able to display.
         gadgets = cursor.fetchall()
         cursor.execute("SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget ON Weapons.weapon_id = WeaponGadget.weapon_id WHERE WeaponGadget.defender_id = ?", (defender_id,))
         weapons = cursor.fetchall()

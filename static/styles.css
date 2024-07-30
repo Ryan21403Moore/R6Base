@@ -28,7 +28,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    list-style-type: none;
     padding: 0;
 }
 
@@ -60,4 +59,20 @@ h1 {
 /* Style the color of the writing once you click onto the defender. */
 .white-text {
     color: white;
+}
+
+/* Styles for the back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #2bff00;
 }
