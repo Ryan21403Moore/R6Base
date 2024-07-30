@@ -1,4 +1,3 @@
-<!-- templates/defender.html -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,16 +5,19 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         body {
-            background-image: url("{{ url_for('static', filename='images/R6Background.jpg') }}");
+            background-image: url("{{ url_for('static', filename='images/R6BackGround.jpg') }}");
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            background-repeat: no-repeat;
+            min-height: 100vh;
         }
+
+        
     </style>
 </head>
 <body class="white-text">
+    <a href="/" class="back-button">Back to Home</a>
     <h1>{{ defender[1] }}</h1>
-    <!-- trying to add in an image, not working -->
     <img src="{{ defender[5] }}" alt="{{ defender[1] }} Image" style="max-width: 300px;">
     <p>Health: {{ defender[6] }}</p>
     <p>Speed: {{ defender[2] }}</p>
