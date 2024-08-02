@@ -1,39 +1,60 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>{{ defender[1] }}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         body {
-            background-image: url("{{ url_for('static', filename='images/R6BackGround.jpg') }}");
+            background-image: url("{{ url_for('static', filename='images/R6Background.jpg') }}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             min-height: 100vh;
         }
 
-        
+        /* Styles for the back button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Styles for the back button */
+        .back-button:hover {
+            background-color: #2bff00;
+        }
     </style>
 </head>
 <body class="white-text">
-    <a href="/" class="back-button">Back to Home</a>
-    <h1>{{ defender[1] }}</h1>
-    <img src="{{ defender[5] }}" alt="{{ defender[1] }} Image" style="max-width: 300px;">
-    <p>Health: {{ defender[6] }}</p>
-    <p>Speed: {{ defender[2] }}</p>
-    <p>Difficulty: {{ defender[3] }}</p>
-    <p>Unlock Cost: {{ defender[4] }}</p>
-    <h2>Weapons</h2>
-    <ul>
-        {% for weapon in weapons %}
-        <li>{{ weapon[0] }} - {{ weapon[1] }}</li>
-        {% endfor %}
-    </ul>
-    <h2>Gadgets</h2>
-    <ul>
-        {% for gadget in gadgets %}
-        <li>{{ gadget[0] }} - {{ gadget[1] }}</li>
-        {% endfor %}
-    </ul>
+    <header>
+        <a href="/" class="back-button">Back to Home</a>
+    </header>
+    <main>
+        <h1>{{ defender[1] }}</h1>
+        <img src="{{ defender[5] }}" alt="{{ defender[1] }} Image" style="max-width: 300px;">
+        <p>Health: {{ defender[6] }}</p>
+        <p>Speed: {{ defender[2] }}</p>
+        <p>Difficulty: {{ defender[3] }}</p>
+        <p>Unlock Cost: {{ defender[4] }}</p>
+        <h2>Weapons</h2>
+        <ul>
+            {% for weapon in weapons %}
+            <li>{{ weapon[0] }} - {{ weapon[1] }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Gadgets</h2>
+        <ul>
+            {% for gadget in gadgets %}
+            <li>{{ gadget[0] }} - {{ gadget[1] }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        
+    </footer>
 </body>
 </html>

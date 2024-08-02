@@ -7,16 +7,24 @@
             background-image: url("{{ url_for('static', filename='images/R6Background.jpg') }}");
             background-size: cover;
             background-position: center;
+            background-repeat: repeat;
             height: 100vh;
         }
     </style>
 </head>
 <body>
-    <h1>Defender Operators</h1>
-    <ul class="defender-list">
-        {% for defender in defenders %}
-        <li class="defender-item"><a href="/defender/{{ defender[0] }}">{{ defender[1] }}</a></li>
-        {% endfor %}
-    </ul>
+    <header>
+        <h1>Defender Operators</h1>
+    </header>
+    <main>
+        <ul class="defender-list">
+            {% for defender in defenders %}
+            <li class="defender-item"><a href="/defender/{{ defender[0] }}">{{ defender[1] }}</a></li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        
+    </footer>
 </body>
 </html>

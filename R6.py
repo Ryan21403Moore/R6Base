@@ -27,10 +27,12 @@ def defender(defender_id):
         cursor.execute("SELECT * FROM Defenders WHERE defender_id = ?", (defender_id,))
         #  Fetch all rows and the details from the gadgets query result to then be able to display to the user.
         defender = cursor.fetchone()
-        cursor.execute("SELECT Gadgets.name, Gadgets.description FROM Gadgets JOIN WeaponGadget ON Gadgets.gadget_id = WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?", (defender_id,))
+        cursor.execute("""SELECT Gadgets.name, Gadgets.description FROM Gadgets JOIN WeaponGadget ON Gadgets.gadget_id =
+          WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
         #  Fetch all rows and details from the weapons query result to then be able to display.
         gadgets = cursor.fetchall()
-        cursor.execute("SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget ON Weapons.weapon_id = WeaponGadget.weapon_id WHERE WeaponGadget.defender_id = ?", (defender_id,))
+        cursor.execute("""SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget 
+        ON Weapons.weapon_id = WeaponGadget.weapon_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
         weapons = cursor.fetchall()
     #  render the defender template with the defender, gadgets, and weapons data to be displayed to the user.
     return render_template('defender.html', defender=defender, gadgets=gadgets, weapons=weapons)
