@@ -31,7 +31,7 @@ def defender(defender_id):
           WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
         #  Fetch all rows and details from the weapons query result to then be able to display.
         gadgets = cursor.fetchall()
-        cursor.execute("""SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget 
+        cursor.execute("""SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget
         ON Weapons.weapon_id = WeaponGadget.weapon_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
         weapons = cursor.fetchall()
     #  render the defender template with the defender, gadgets, and weapons data to be displayed to the user.

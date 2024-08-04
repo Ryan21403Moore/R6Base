@@ -35,7 +35,7 @@
     </header>
     <main>
         <h1>{{ defender[1] }}</h1>
-        <img src="{{ defender[5] }}" alt="{{ defender[1] }} Image" style="max-width: 300px;">
+        <img src="{{ url_for('static', filename=defender[5]) }}" alt="{{ defender[1] }} Image" class="defender-image">
         <p>Health: {{ defender[6] }}</p>
         <p>Speed: {{ defender[2] }}</p>
         <p>Difficulty: {{ defender[3] }}</p>
@@ -54,7 +54,7 @@
         </ul>
     </main>
     <footer>
-        
+        <!-- Footer content can go here -->
     </footer>
 </body>
 </html>
