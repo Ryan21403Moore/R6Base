@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>{{ defender[1] }}</title>
+    <title>{{ [defender1] }}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         body {
@@ -15,6 +15,7 @@
             color: white;
             text-align: center;
         }
+        
     </style>
 </head>
 <body class="white-text">
@@ -22,24 +23,28 @@
         <a href="/" class="back-button">Back to Home</a>
     </header>
     <main>
-        <h1>{{ defender[1] }}</h1>
-        <img src="{{ url_for('static', filename=defender[5]) }}" alt="{{ defender[1] }} Image" class="defender-image">
-        <p>Health: {{ defender[6] }}</p>
-        <p>Speed: {{ defender[2] }}</p>
-        <p>Difficulty: {{ defender[3] }}</p>
-        <p>Unlock Cost: {{ defender[4] }}</p>
-        <h2>Weapons</h2>
-        <ul>
-            {% for weapon in weapons %}
-            <li>{{ weapon[0] }} - {{ weapon[1] }}</li>
-            {% endfor %}
-        </ul>
-        <h2>Gadgets</h2>
-        <ul>
-            {% for gadget in gadgets %}
-            <li>{{ gadget[0] }} - {{ gadget[1] }}</li>
-            {% endfor %}
-        </ul>
+        <div class="defender-container">
+            <h1 class="defender-name">{{ defender[1] }}</h1>
+            <img src="{{ url_for('static', filename=defender[5]) }}" alt="{{ defender[1] }} Image" class="defender-image">
+            <div class="defender-details">
+                <p>Health: {{ defender[6] }}</p>
+                <p>Speed: {{ defender[2] }}</p>
+                <p>Difficulty: {{ defender[3] }}</p>
+                <p>Unlock Cost: {{ defender[4] }}</p>
+                <h2>Weapons</h2>
+                <ul>
+                    {% for weapon in weapons %}
+                    <li>{{ weapon[0] }} - {{ weapon[1] }}</li>
+                    {% endfor %}
+                </ul>
+                <h2>Gadgets</h2>
+                <ul>
+                    {% for gadget in gadgets %}
+                    <li>{{ gadget[0] }} - {{ gadget[1] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
         <!-- Footer content can go here -->

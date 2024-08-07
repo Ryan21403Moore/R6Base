@@ -62,7 +62,7 @@ h1 {
     color: white;
 }
 
-/*Style and size the defender images.*/
+/*styleing and size the defender images.*/
 .defender-image {
     display: block;
     margin: 0 auto 20px;
@@ -73,7 +73,7 @@ h1 {
 }
 
 
- /* Styles for the back button */
+ /* styling for the back button */
  .back-button {
     position: absolute;
     top: 20px;
@@ -85,7 +85,26 @@ h1 {
     border-radius: 5px;
 }
 
-/* Styles for the back button */
+/* Styleing for the back button */
 .back-button:hover {
     background-color: #2bff00;
+}
+
+
+.defender-details {
+    font-size: 1.5em; /* Increase font size */
+    line-height: 1.6; /* Add line height */
+}
+
+.defender-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px;
+}
+
+.defender-name {
+    font-size: 3em; /* Increased font size for the defender's name */
+    margin-bottom: 20px; /* Add space below the name */
 }
