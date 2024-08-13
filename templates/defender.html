@@ -1,10 +1,10 @@
 <html>
 <head>
-    <title>{{ [defender1] }}</title>
+    <title>{{ defender[1] }}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         body {
-            background-image: url("{{ url_for('static', filename='images/R6Background.jpg') }}");
+            background-image: url("{{ url_for('static', filename='images/defenderbackground.jpg') }}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -24,7 +24,7 @@
     </header>
     <main>
         <div class="defender-container">
-            <h1 class="defender-name">{{ defender[1] }}</h1>
+            <h1 class="defender-name">{{ defender[1] }}</h1> 
             <img src="{{ url_for('static', filename=defender[5]) }}" alt="{{ defender[1] }} Image" class="defender-image">
             <div class="defender-details">
                 <p>Health: {{ defender[6] }}</p>
@@ -47,7 +47,7 @@
         </div>
     </main>
     <footer>
-        <!-- Footer content can go here -->
+        
     </footer>
 </body>
 </html>

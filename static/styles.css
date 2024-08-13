@@ -70,6 +70,7 @@ h1 {
     max-height: 500px;
     width: 100%; 
     height: auto;
+    margin-bottom: 30px;
 }
 
 
@@ -93,7 +94,7 @@ h1 {
 
 .defender-details {
     font-size: 1.5em; /* Increase font size */
-    line-height: 1.6; /* Add line height */
+    line-height: 2; /* Add line height */
 }
 
 .defender-container {
@@ -106,5 +107,15 @@ h1 {
 
 .defender-name {
     font-size: 3em; /* Increased font size for the defender's name */
-    margin-bottom: 20px; /* Add space below the name */
+    margin-bottom: 50px; /* Add space below the name */
+}
+
+ /* Remove bullet points from decriptions*/
+ ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
