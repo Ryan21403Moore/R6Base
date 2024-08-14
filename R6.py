@@ -25,11 +25,11 @@ def defender(defender_id):
         cursor = conn.cursor()
         #  Get all of the defenders for the page.
         cursor.execute("SELECT * FROM Defenders WHERE defender_id = ?", (defender_id,))
-        #  Fetch all rows and the details from the gadgets query result to then be able to display to the user.
+        #  Fetch all gadgets linked to the defender and the information for them
         defender = cursor.fetchone()
         cursor.execute("""SELECT Gadgets.name, Gadgets.description FROM Gadgets JOIN WeaponGadget ON Gadgets.gadget_id =
           WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
-        #  Fetch all rows and details from the weapons query result to then be able to display.
+        #  Fetch all gadgets linked to the defender and the information for them
         gadgets = cursor.fetchall()
         cursor.execute("""SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget
         ON Weapons.weapon_id = WeaponGadget.weapon_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
