@@ -3,16 +3,10 @@
 /* Style body of the website */
 body {
     height: 100%;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-
-}
-
-body {
+    font-family: 'Lato', sans-serif; 
     display: flex;
     flex-direction: column;
-    min-height: 100%; /* Ensure the body covers at least 100% of the height */
+    min-height: 100%;
 }
 
 /* Center the main heading "Defenders" */
@@ -110,8 +104,8 @@ h1 {
     margin-bottom: 50px; /* Add space below the name */
 }
 
- /* Remove bullet points from decriptions*/
- ul {
+/* Remove bullet points from decriptions*/
+ul {
     list-style-type: none;
     padding: 0;
 }
