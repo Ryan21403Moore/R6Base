@@ -1,34 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Set the title of the page -->
-    <title>Rainbow Six Siege Defenders</title>
-    
-    <!-- Link to the CSS file for styling -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepage.css') }}">
-</head>
-<body>
-    <!-- Add an image to for the background -->
-    <img src="{{ url_for('static', filename='images/R6Background.jpg') }}" class="homebackground-image" alt="homeBackground Image">
+{% extends "layout.html" %}
 
-    <!-- Header section title -->
-    <header>
-        <h1>Rainbow Six Siege Defenders</h1>
-    </header>
-    
-    <!-- Main content section -->
+{% block content %}
+    <!-- Home page specific content -->
+    <img src="{{ url_for('static', filename='images/R6Background.jpg') }}" alt="Background Image" class="homebackground-image">
     <main>
-        <!-- List of defenders pulled from the database -->
         <ul class="defender-list">
-            <!-- Loop through each defender and create a link to their details page -->
             {% for defender in defenders %}
             <li class="defender-item"><a href="/defender/{{ defender[0] }}">{{ defender[1] }}</a></li>
             {% endfor %}
         </ul>
     </main>
-    
-    <!-- Footer section -->
-    <footer>
-    </footer>
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,36 @@
+
+<html>
+<head>
+    <!-- Set the viewport to ensure the website is responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to the external CSS stylesheet for general styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='defender.css') }}">
+</head>
+<body>
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            {% if request.endpoint != 'home' %}
+            <li><a href="/">Home</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    <!-- Header section with a title -->
+    <header>
+        <h1>Rainbow Six Siege Defenders</h1>
+    </header>
+
+    <!-- Main content block for dynamic content insertion -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Optional footer content -->
+        <p>2024 Rainbow Six Siege Database</p>
+    </footer>
+</body>
+</html>
