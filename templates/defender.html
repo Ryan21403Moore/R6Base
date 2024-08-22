@@ -1,43 +1,44 @@
-<html>
+<!DOCTYPE html>
 <head>
+    <!-- Set the title of the webpage to the defender's name -->
     <title>{{ defender[1] }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-    <style>
-        body {
-            background-image: url("{{ url_for('static', filename='images/defenderbackground.jpg') }}");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            font-family: 'Lato', sans-serif;
-        }
-        
-    </style>
+    
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='defender.css') }}">
 </head>
 <body class="white-text">
+    <!-- Add an image for the background -->
+    <img src="{{ url_for('static', filename='images/defenderbackground.jpg') }}" class="defenderbackground-image" alt="DefenderBackground Image">
+
     <header>
+        <!-- Back button to return to the homepage -->
         <a href="/" class="back-button">Back to Home</a>
     </header>
     <main>
+        <!-- Container for defender details -->
         <div class="defender-container">
+            <!-- Defender's name -->
             <h1 class="defender-name">{{ defender[1] }}</h1> 
+            
+            <!-- Defender's image -->
             <img src="{{ url_for('static', filename=defender[5]) }}" alt="{{ defender[1] }} Image" class="defender-image">
+            
+            <!-- Defender's details such as the health and cost -->
             <div class="defender-details">
                 <p>Health: {{ defender[6] }}</p>
                 <p>Speed: {{ defender[2] }}</p>
                 <p>Difficulty: {{ defender[3] }}</p>
                 <p>Unlock Cost: {{ defender[4] }}</p>
+                
+                <!-- Weapons list -->
                 <h2>Weapons</h2>
                 <ul>
                     {% for weapon in weapons %}
                     <li>{{ weapon[0] }} - {{ weapon[1] }}</li>
                     {% endfor %}
                 </ul>
+                
+                <!-- Gadgets list -->
                 <h2>Gadgets</h2>
                 <ul>
                     {% for gadget in gadgets %}
@@ -48,7 +49,7 @@
         </div>
     </main>
     <footer>
-        
+       
     </footer>
 </body>
 </html>

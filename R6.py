@@ -27,9 +27,10 @@ def defender(defender_id):
         cursor.execute("SELECT * FROM Defenders WHERE defender_id = ?", (defender_id,))
         #  Fetch all gadgets linked to the defender and the information for them
         defender = cursor.fetchone()
-        cursor.execute("""SELECT Gadgets.name, Gadgets.description FROM Gadgets JOIN WeaponGadget ON Gadgets.gadget_id =
+        cursor.execute("""SELECT Gadgets.name, Gadgets.description FROM Gadgets 
+          JOIN WeaponGadget ON Gadgets.gadget_id =
           WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
-        #  Fetch all gadgets linked to the defender and the information for them
+        #  Fetch all gadgets linked to the defender and the information
         gadgets = cursor.fetchall()
         cursor.execute("""SELECT Weapons.name, Weapons.description FROM Weapons JOIN WeaponGadget
         ON Weapons.weapon_id = WeaponGadget.weapon_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
