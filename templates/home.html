@@ -1,12 +1,21 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <!-- Home page specific content -->
+    <!-- Home page content -->
+    
+    <!-- Background image for the home page -->
     <img src="{{ url_for('static', filename='images/R6Background.jpg') }}" alt="Background Image" class="homebackground-image">
+
+    <!-- Main content -->
     <main>
+        <!-- List of defenders displayed on the home page -->
         <ul class="defender-list">
+            <!-- Loop through the defenders -->
             {% for defender in defenders %}
-            <li class="defender-item"><a href="/defender/{{ defender[0] }}">{{ defender[1] }}</a></li>
+            <!-- Create a list item for each defender with a link to their specific page -->
+            <li class="defender-item">
+                <a href="/defender/{{ defender[0] }}">{{ defender[1] }}</a>
+            </li>
             {% endfor %}
         </ul>
     </main>

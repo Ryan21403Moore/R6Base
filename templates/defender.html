@@ -2,24 +2,49 @@
 
 {% block content %}
     <!-- Defender page specific content -->
+
+    <!-- Background image for the defender page -->
     <img src="{{ url_for('static', filename='images/defenderbackground.jpg') }}" alt="Background Image" class="defenderbackground-image">
+
     <main>
+        <!-- Back to Home button -->
+        <a href="/" class="back-button">Back to Home</a>
+
+        <!-- Container for the defender's information -->
         <div class="defender-container">
+            <!-- Defender's name displayed as a heading -->
             <h1 class="defender-name">{{ defender[1] }}</h1> 
+
+            <!-- Image of the defender -->
             <img src="{{ url_for('static', filename=defender[5]) }}" alt="{{ defender[1] }} Image" class="defender-image">
+
+            <!-- Section for the defender's details -->
             <div class="defender-details">
+                <!-- Display defender's health -->
                 <p>Health: {{ defender[6] }}</p>
+
+                <!-- Display defender's speed -->
                 <p>Speed: {{ defender[2] }}</p>
+
+                <!-- Display defender's difficulty level -->
                 <p>Difficulty: {{ defender[3] }}</p>
+
+                <!-- Display the unlock cost for the defender -->
                 <p>Unlock Cost: {{ defender[4] }}</p>
+
+                <!-- Section for the defender's weapons -->
                 <h2>Weapons</h2>
                 <ul>
+                    <!-- Loop through the list of weapons and display each one -->
                     {% for weapon in weapons %}
                     <li>{{ weapon[0] }} - {{ weapon[1] }}</li>
                     {% endfor %}
                 </ul>
+
+                <!-- Section for the defender's gadgets -->
                 <h2>Gadgets</h2>
                 <ul>
+                    <!-- Loop through the list of gadgets and display each one -->
                     {% for gadget in gadgets %}
                     <li>{{ gadget[0] }} - {{ gadget[1] }}</li>
                     {% endfor %}
