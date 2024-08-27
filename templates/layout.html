@@ -1,8 +1,12 @@
 <html>
 <head>
-    <!-- Set the viewport to ensure the website is responsive -->
+    <!-- Set the viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Link to the external CSS stylesheet for general styling -->
+
+     <!-- Code for the title on the tab -->
+     <title>{% block title %}Rainbow Six Siege Defenders{% endblock %}</title>
+
+    <!-- Link to the external CSS stylesheet for styling -->
     <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='defender.css') }}">
 </head>

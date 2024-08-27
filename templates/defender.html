@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 
+ <!-- Code for the tab title -->
+{% block title %}
+    {{ defender[1] }} - Rainbow Six Siege Defender
+{% endblock %}
+
+
 {% block content %}
     <!-- Defender page specific content -->
 
@@ -12,7 +18,7 @@
 
         <!-- Container for the defender's information -->
         <div class="defender-container">
-            <!-- Defender's name displayed as a heading -->
+            <!-- Defender's name displayed -->
             <h1 class="defender-name">{{ defender[1] }}</h1> 
 
             <!-- Image of the defender -->
@@ -26,7 +32,7 @@
                 <!-- Display defender's speed -->
                 <p>Speed: {{ defender[2] }}</p>
 
-                <!-- Display defender's difficulty level -->
+                <!-- Display defender's difficulty -->
                 <p>Difficulty: {{ defender[3] }}</p>
 
                 <!-- Display the unlock cost for the defender -->
