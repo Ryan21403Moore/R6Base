@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found</title>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='404error.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Display a 404 error message -->
+        <h1>404 - Page Not Found</h1>
+    </header>
+    <main>
+        <!-- Brief description to the user -->
+        <p>Sorry this page doesn't exist.</p>
+        <!-- Link back to the home page -->
+        <a href="/" class="back-button">Back to Home</a>
+    </main>
+</body>
+</html>

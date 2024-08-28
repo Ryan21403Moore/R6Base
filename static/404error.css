@@ -1,0 +1,35 @@
+/* Style the body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #1c1c1c;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+/* Style the main error message */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+/* Style the description text */
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Style the back to home button */
+.back-button {
+    background-color: #0b54a3;
+    color: white;
+}
+
+/* Change button color on hover */
+.back-button:hover {
+    background-color: #00ff0d;
+}
