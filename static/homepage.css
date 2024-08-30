@@ -22,14 +22,8 @@ body {
     background-repeat: no-repeat; /* Prevent repeating the image */
 }
 
-/* Center the main heading "Defenders" */
-h1 {
-    text-align: center;
-    margin: 30px;
-    color: rgb(255, 255, 255);
-}
 
-/* Style the list of defenders */
+/* Style the list of defenders neatly for homepage */
 .defender-list {
     display: flex;
     flex-wrap: wrap;
@@ -38,7 +32,7 @@ h1 {
     padding: 0;
 }
 
-/* Style each defender button */
+/* Style each defender button background */
 .defender-item {
     background-color: rgba(21, 68, 224, 0.5); 
     border: 1px solid rgb(0, 0, 0);
@@ -50,14 +44,20 @@ h1 {
     width: 200px;
 }
 
-/* Style the defender button letters */
+/* Style the text for the link to each defender */
 .defender-item a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
+    display: block;
+    font-size: 30px; 
+    padding: 10px;
+    transition: transform 0.5s ease, color 0.5s ease; /* Smooth transition for the hover effect */
 }
 
-/* Style the color of the defender button letters when about to click onto it */
+
+/* Increase the size of the defender link when hovered */
 .defender-item a:hover {
+    transform: scale(2.0);
     color: #2bff00;
 }

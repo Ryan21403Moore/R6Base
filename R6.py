@@ -5,7 +5,7 @@ app = Flask(__name__)
 #  Path to the SQLite database file
 db_path = 'SiegeBase.db'
 
-# 404 error handler
+# 404 error
 @app.errorhandler(404)
 def page_not_found(e):
     # Render the custom 404 error page
