@@ -56,7 +56,7 @@ def search():
         # Fetch the result of the query
         defender = cursor.fetchone()
         if defender:
-            # If a defender is found, redirect to the defender's detailed page
+            # If a defender is found, redirect to the defender's page
             return redirect(url_for('defender', defender_id=defender[0]))
         else:
             # If no defender is found, render the 404 error page
