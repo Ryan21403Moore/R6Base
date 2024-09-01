@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 
 app = Flask(__name__)
@@ -43,6 +43,24 @@ def defender(defender_id):
         weapons = cursor.fetchall()
     #  render the defender template with the defender, gadgets, and weapons data to be displayed to the user.
     return render_template('defender.html', defender=defender, gadgets=gadgets, weapons=weapons)
+
+
+@app.route('/search')
+def search():
+    query = request.args.get('query')
+    # Connect to the SQLite database
+    with sqlite3.connect(db_path) as conn:
+        cursor = conn.cursor()
+        # Execute a query to find a defender with a match similar to the search
+        cursor.execute("SELECT * FROM Defenders WHERE name LIKE ?", (query,))
+        # Fetch the result of the query
+        defender = cursor.fetchone()
+        if defender:
+            # If a defender is found, redirect to the defender's detailed page
+            return redirect(url_for('defender', defender_id=defender[0]))
+        else:
+            # If no defender is found, render the 404 error page
+            return render_template('404.html'), 404
 
 
 if __name__ == '__main__':

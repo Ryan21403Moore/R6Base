@@ -2,12 +2,23 @@
 
 {% block content %}
     <!-- Home page content -->
-    
+   
     <!-- Background image for the home page -->
     <img src="{{ url_for('static', filename='images/R6Background.jpg') }}" alt="Background Image" class="homebackground-image">
 
+
     <!-- Main content -->
     <main>
+
+
+        <!-- Add a form for the search bar -->
+        <form action="{{ url_for('search') }}" method="get" class="search-form">
+        <input type="text" name="query" placeholder="Search for a defender here" class="search-input">
+        <button type="submit" class="search-button">Search</button>
+        </form>
+
+
+       
         <!-- List of defenders displayed on the home page -->
         <ul class="defender-list">
             <!-- Loop through the defenders -->
