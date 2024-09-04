@@ -5,14 +5,8 @@ app = Flask(__name__)
 #  Path to the SQLite database file
 db_path = 'SiegeBase.db'
 
-# 404 error
-@app.errorhandler(404)
-def page_not_found(e):
-    # Render the custom 404 error page
-    return render_template('404.html'), 404
 
-
-@app.route('/')
+@app.route('/home')
 def home():
     #  Connect to the database
     with sqlite3.connect(db_path) as conn:
@@ -22,6 +16,13 @@ def home():
         defenders = cursor.fetchall()
     #  Render the home.html template, for the defenders be shown on homepage.
     return render_template('home.html', defenders=defenders)
+
+
+# 404 error
+@app.errorhandler(404)
+def page_not_found(e):
+    # Render the custom 404 error page
+    return render_template('404.html'), 404
 
 
 @app.route('/defender/<int:defender_id>')
