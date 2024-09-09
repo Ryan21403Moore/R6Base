@@ -6,7 +6,7 @@ app = Flask(__name__)
 db_path = 'SiegeBase.db'
 
 
-@app.route('/home')
+@app.route('/')
 def home():
     #  Connect to the database
     with sqlite3.connect(db_path) as conn:
