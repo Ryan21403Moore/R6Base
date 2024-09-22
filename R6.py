@@ -1,5 +1,8 @@
-from flask import Flask, render_template, request, redirect, url_for
+#  Import Flask and other important materials for the operation of the code
+from flask import Flask, render_template, request, redirect, url_for  
+#  Import for database connections
 import sqlite3
+
 
 app = Flask(__name__)
 #  Path to the SQLite database file
@@ -27,6 +30,9 @@ def page_not_found(e):
 
 @app.route('/defender/<int:defender_id>')
 def defender(defender_id):
+    # Check if the defender_id is greater than 35, if so, show 404 page
+    if defender_id < 1 or defender_id > 35:
+        return render_template('404.html'), 404
     #  Connect to the database
     with sqlite3.connect(db_path) as conn:
         cursor = conn.cursor()
