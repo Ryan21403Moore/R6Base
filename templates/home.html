@@ -10,10 +10,11 @@
     <!-- Main content -->
     <main>
 
-
+        
+ 
         <!-- Add a form for the search bar -->
         <form action="{{ url_for('search') }}" method="get" class="search-form">
-        <input type="text" name="query" placeholder="Search for a defender here" class="search-input">
+        <input type="text" name="query" placeholder="Search for a defender here" class="search-input" maxlength="20">
         <button type="submit" class="search-button">Search</button>
         </form>
 

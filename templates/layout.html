@@ -9,13 +9,21 @@
     <!-- Link to the external CSS stylesheet for styling -->
     <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='defender.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
 </head>
 
 <body>
-    <!-- Header section with a title -->
+    
+    <!-- Header section with a title, conditionally rendered -->
+    {% if request.path == '/' or request.path.startswith('/defender/') %} <!-- Show the header on the homepage and defender pages -->
     <header>
         <h1>Rainbow Six Siege Defenders</h1>
     </header>
+    {% endif %}
+
+    {% if request.path == '/' %}
+    <a href="/about" class="about-button">About</a>
+    {% endif %}
 
     <!-- Main content block -->
     <main>

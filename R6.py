@@ -27,6 +27,11 @@ def page_not_found(e):
     # Render the custom 404 error page
     return render_template('404.html'), 404
 
+@app.route('/about')
+def about():
+    #  Route to render the About page
+    return render_template('about.html')
+
 
 @app.route('/defender/<int:defender_id>')
 def defender(defender_id):
