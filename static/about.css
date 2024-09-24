@@ -1,13 +1,19 @@
+body {
+    background-color: black; /* Black background for the entire page */
+    color: white; /* Default text color */
+}
+
+/* Style for the About button */
 .about-button {
-    display: block; /* Make it a block element to take full width */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: white; /* White text color */
-    padding: 10px 20px; /* Padding around the button */
-    text-align: center; /* Center text inside the button */
-    text-decoration: none; /* Remove underline from the link */
-    border-radius: 5px; /* Rounded corners */
-    margin: 20px auto; /* Center the button horizontally with margin */
-    width: fit-content; /* Adjust width to content */
+    display: block; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    border-radius: 5px; 
+    margin: 20px auto; 
+    width: fit-content; 
+    text-decoration: none; /* Remove underline from the button */
 }
 
 /* Hover effect for the About button */
@@ -19,40 +25,34 @@
 main {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center all content horizontally */
-    margin-top: 20px; /* Add some space above the content */
+    align-items: center; 
+    margin-top: 20px; 
 }
 
 /* About page container styling */
 .about-container {
     max-width: 800px;
-    margin: 50px auto; /* Center the content */
+    margin: 50px auto; 
     padding: 20px;
     text-align: center;
-    background-color: #f4f4f4; /* Light background */
+    background-color: white; /* Light background for the container */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
 }
 
 /* About page headings */
-.about-container h1 {
-    font-size: 2.5em;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-/* About page headings */
+.about-container h1,
 .about-container h2 {
     font-size: 2.5em;
     margin-bottom: 15px;
-    color: #333;
+    color: #333; /* Dark color for headings */
 }
 
 /* About page paragraph styling */
 .about-container p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #555;
+    color: #555; /* Slightly lighter color for paragraph text */
 }
 
 /* Style for the back home button */
@@ -61,8 +61,8 @@ main {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    text-decoration: none;
+    color: #fff; 
+    text-decoration: none; /* Remove underline from the button */
     border-radius: 5px;
 }
 
