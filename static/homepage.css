@@ -66,42 +66,29 @@ body {
 }
 
 
-/* Style for the search form */
-.search-form {
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-    font-family: 'Lato', sans-serif;
-}
 
-
-/* Style for the search input field */
-.search-input {
+/* Style for the search bar */
+#searchBar {
     padding: 10px;
-    border: 1px solid #ccc;
+    width: 300px;
     border-radius: 5px;
-    font-size: 16px;
-    width: 250px;
-    margin-right: 10px;
-    font-family: 'Lato', sans-serif;
+    border: 1px solid #ccc;
+    
 }
-
 
 /* Style for the search button */
-.search-button {
+input[type="submit"] {
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
-    background-color: black;
-    color: #fff;
-    font-size: 25px;
+    background-color: black; /* Button background color */
+    color: white;
+    border: none;
     cursor: pointer;
-    font-family: 'Lato', sans-serif;
+    
 }
 
-
-/* Style for the search button on hover */
-.search-button:hover {
+/* Hover effect for the search button */
+input[type="submit"]:hover {
     background-color: #2bff00;
     color: black;
 }

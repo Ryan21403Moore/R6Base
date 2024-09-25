@@ -10,11 +10,22 @@
     <!-- Main content -->
     <main>
  
-        <!-- Add a form for the search bar -->
-        <form action="{{ url_for('search') }}" method="get" class="search-form">
-        <input type="text" name="query" placeholder="Search for a defender here" class="search-input" maxlength="25">
-        <button type="submit" class="search-button">Search</button>
+        <form method="GET" action="/search" onsubmit="return validateSearch()">
+            <input type="text" name="query" id="searchBar" placeholder="Search Defenders" maxlength="35">
+            <input type="submit" value="Search">
         </form>
+        <p id="errorMessage" style="color: red;"></p>
+        
+        <script>
+        function validateSearch() {
+            var searchBar = document.getElementById("searchBar").value;
+            if (searchBar === "") {
+                document.getElementById("errorMessage").textContent = "Please type something in before searching";
+                return false;
+            }
+            return true; 
+        }
+        </script>
 
 
        
