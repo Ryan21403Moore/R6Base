@@ -6,19 +6,20 @@ body {
 /* Style for the About button */
 .about-button {
     display: block; 
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: black; 
     color: white; 
-    padding: 10px 20px; 
+    padding: 10px 15px; 
     text-align: center; 
     border-radius: 5px; 
     margin: 20px auto; 
     width: fit-content; 
-    text-decoration: none; /* Remove underline from the button */
+    text-decoration: none; 
+    font-size: 1.25em; /
 }
 
 /* Hover effect for the About button */
 .about-button:hover {
-    background-color: #2bff00; /* Change background color on hover */
+    background-color: #2bff00; 
 }
 
 /* Style for the main content */
