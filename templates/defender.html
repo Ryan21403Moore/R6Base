@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
- <!-- Code for the tab title -->
+ 
 {% block title %}
     {{ defender[1] }} - Rainbow Six Siege Defender
 {% endblock %}
@@ -9,14 +9,14 @@
 {% block content %}
     <!-- Defender page specific content -->
 
-    <!-- Background image for the defender page -->
+    
     <img src="{{ url_for('static', filename='images/defenderbackground.jpg') }}" alt="Background Image" class="defenderbackground-image">
 
     <main>
         <!-- Back to Home button -->
         <a href="/" class="back-button">Back to Home</a>
 
-        <!-- Container for the defender's information -->
+        
         <div class="defender-container">
             <!-- Defender's name displayed -->
             <h1 class="defender-name">{{ defender[1] }}</h1> 
