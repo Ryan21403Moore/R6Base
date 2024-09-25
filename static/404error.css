@@ -27,6 +27,10 @@ p {
 .back-button {
     background-color: #0b54a3;
     color: white;
+    text-decoration: none; /* Remove underline from the button */
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 /* Change button color on hover */
