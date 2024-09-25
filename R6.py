@@ -1,5 +1,5 @@
 #  Import Flask and other important materials for the operation of the code
-from flask import Flask, render_template, request, redirect, url_for  
+from flask import Flask, render_template, request, redirect, url_for
 #  Import for database connections
 import sqlite3
 
@@ -45,7 +45,7 @@ def defender(defender_id):
         cursor.execute("SELECT * FROM Defenders WHERE defender_id = ?", (defender_id,))
         #  Fetch all gadgets linked to the defender and the information for them
         defender = cursor.fetchone()
-        cursor.execute("""SELECT Gadgets.name, Gadgets.description FROM Gadgets 
+        cursor.execute("""SELECT Gadgets.name, Gadgets.description FROM Gadgets
           JOIN WeaponGadget ON Gadgets.gadget_id =
           WeaponGadget.gadget_id WHERE WeaponGadget.defender_id = ?""", (defender_id,))
         #  Fetch all gadgets linked to the defender and the information

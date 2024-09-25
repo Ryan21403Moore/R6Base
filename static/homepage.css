@@ -92,3 +92,12 @@ input[type="submit"]:hover {
     background-color: #2bff00;
     color: black;
 }
+
+/* Style for the main title */
+header h1 {
+    font-size: 3em; 
+    text-align: center;
+    font-family: 'Lato', sans-serif; 
+    color: white; 
+    margin-top: 20px; 
+}
