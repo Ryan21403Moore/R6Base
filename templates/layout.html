@@ -2,9 +2,11 @@
 <head>
     <!-- Set the viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import Lato font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-     <!-- Code for the title on the tab -->
-     <title>{% block title %}Rainbow Six Siege Defenders{% endblock %}</title>
+    <!-- Code for the title on the tab -->
+    <title>{% block title %}Rainbow Six Siege Defenders{% endblock %}</title>
 
     <!-- Link to the external CSS stylesheet for styling -->
     <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
@@ -14,8 +16,8 @@
 
 <body>
     
-    <!-- Header section with a title, conditionally rendered -->
-    {% if request.path == '/' or request.path.startswith('/defender/') %} <!-- Show the header on the homepage and defender pages -->
+    <!-- Header section with a title removed if not on homepage or defender page -->
+    {% if request.path == '/' or request.path.startswith('/defender/') %}
     <header>
         <h1>Rainbow Six Siege Defenders</h1>
     </header>
@@ -34,6 +36,7 @@
     <footer>
         
         <p>2024 Rainbow Six Siege Database</p>
+        
     </footer>
 </body>
 </html>

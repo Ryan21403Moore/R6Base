@@ -55,6 +55,7 @@ body {
     font-size: 30px;
     padding: 10px;
     transition: transform 0.5s ease, color 0.5s ease;
+    
 }
 
 
@@ -70,6 +71,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 50px 0;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -81,6 +83,7 @@ body {
     font-size: 16px;
     width: 250px;
     margin-right: 10px;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -89,14 +92,16 @@ body {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: black;
     color: #fff;
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
+    font-family: 'Lato', sans-serif;
 }
 
 
 /* Style for the search button on hover */
 .search-button:hover {
     background-color: #2bff00;
+    color: black;
 }

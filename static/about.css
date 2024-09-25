@@ -1,6 +1,8 @@
 body {
     background-color: black; /* Black background for the entire page */
     color: white; /* Default text color */
+    /* Apply Lato font to the entire body */
+    font-family: 'Lato', sans-serif;
 }
 
 /* Style for the About button */
@@ -14,12 +16,14 @@ body {
     margin: 20px auto; 
     width: fit-content; 
     text-decoration: none; 
-    font-size: 1.25em; /
+    font-size: 1.25em;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Hover effect for the About button */
 .about-button:hover {
     background-color: #2bff00; 
+    color: black;
 }
 
 /* Style for the main content */
@@ -65,10 +69,11 @@ main {
     color: #fff; 
     text-decoration: none; /* Remove underline from the button */
     border-radius: 5px;
+    font-family: 'Lato', sans-serif;
 }
 
 /* Change the color of the back home button on hover */
 .back-home-button:hover {
     background-color: #2bff00;
-    color: #000;
+    color: black;
 }

@@ -1,3 +1,8 @@
+/* Apply Lato font to the entire body */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 /* Style for the defender background image */
 .defenderbackground-image {
     position: fixed;
@@ -27,7 +32,7 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: black;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -38,6 +43,7 @@
 /* Styleing for the back button */
 .back-button:hover {
     background-color: #2bff00;
+    color: black;
 }
 
 
