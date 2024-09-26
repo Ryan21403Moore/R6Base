@@ -14,19 +14,22 @@
             <input type="text" name="query" id="searchBar" placeholder="Search Defenders" maxlength="35">
             <input type="submit" value="Search">
         </form>
-        <p id="errorMessage" style="color: red;"></p>
+        <p id="errorMessage">Please type something into the search bar first</p>
         
         <script>
         function validateSearch() {
             var searchBar = document.getElementById("searchBar").value;
+            var errorMessage = document.getElementById("errorMessage");
+            
             if (searchBar === "") {
-                document.getElementById("errorMessage").textContent = "Please type something in before searching";
-                return false;
+                errorMessage.style.display = "block"; 
+                return false; 
+            } else {
+                errorMessage.style.display = "none"; 
             }
             return true; 
         }
         </script>
-
 
        
         <!-- List of defenders displayed on the home page -->
